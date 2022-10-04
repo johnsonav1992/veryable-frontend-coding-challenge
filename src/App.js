@@ -8,7 +8,7 @@ console.log(data)
 function App() {
 	return (
 		<div className="user-view-container">
-			<Header />
+      <Header />
 			<section className="cards-container">
 				{data.map(user => {
           return <UserCard key={user.id} userData={user} />

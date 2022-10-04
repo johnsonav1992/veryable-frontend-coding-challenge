@@ -9,8 +9,6 @@
     justify-content: center;
     gap: .4rem;
     height: 64px;
-    position: sticky;
-    top: 0;
 }
 
 .img-wrapper {
