@@ -1,0 +1,43 @@
+@import '../../App.css';
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.role-icon {
+    width: 50px;
+}
+
+.info-container {
+    width: 60%;
+}
+
+.info-container h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-dark);
+}
+
+.info-container p, h4 {
+    font-size: 10px;
+    font-weight: normal;
+    color: var(--gray-dark);
+}
+
+.email {
+    font-size: 10px;
+    font-weight: normal;
+    color: var(--gray-light);
+}
+.carrot {
+
+}
