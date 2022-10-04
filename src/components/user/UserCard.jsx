@@ -4,6 +4,7 @@ import classes from './UserCard.module.css'
 import userIcon from '../../assets/user.svg'
 import expand from '../../assets/expand_more.svg'
 import contract from '../../assets/expand_less.svg'
+import { phoneNumberFormatter } from '../../helper-functions/helperFunctions'
 
 const UserCard = ({ userData }) => {
 	const [isExpanded, setIsExpanded] = useState(false)
@@ -22,6 +23,10 @@ const UserCard = ({ userData }) => {
 		createdAt,
 		lastLoggedIn,
 	} = userData
+
+	const formattedPhone = phoneNumberFormatter(phone)
+
+	console.log(formattedPhone)
 
 	const clickHandler = () => {
 		setIsExpanded(!isExpanded)
@@ -57,7 +62,7 @@ const UserCard = ({ userData }) => {
 								</div>
 								<div>
 									<h3>Phone</h3>
-									<p>{phone}</p>
+									<p>{formattedPhone}</p>
 								</div>
 								<div>
 									<h3>Created At</h3>

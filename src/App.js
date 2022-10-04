@@ -3,8 +3,6 @@ import Header from './components/UI/Header'
 import UserCard from './components/user/UserCard'
 import data from './data/users.json'
 
-console.log(data)
-
 function App() {
 	return (
 		<div className="user-view-container">
