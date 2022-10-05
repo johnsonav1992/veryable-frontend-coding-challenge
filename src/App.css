@@ -12,8 +12,9 @@ h3, h4, h5, p {
 :root {
   --gray-dark: #4A4A4A;
   --gray-light: #7E7E7E; 
-  --blue-color: #2081C3;
-  --teal-color: #68AAAB;
+  --blue-filter: invert(47%) sepia(16%) saturate(2301%) hue-rotate(162deg) brightness(91%) contrast(93%);
+  --teal-filter: invert(66%) sepia(10%) saturate(1236%) hue-rotate(132deg) brightness(92%) contrast(89%);
+  --gray-filter: invert(57%) sepia(15%) saturate(0%) hue-rotate(283deg) brightness(83%) contrast(84%);
   --background-gray: #f1f5f6;
 }
 

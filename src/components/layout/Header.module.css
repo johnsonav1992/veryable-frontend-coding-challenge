@@ -19,6 +19,7 @@
 
 .logo {
     height: 100%;
+    filter: var(--blue-filter);
 }
 
 .header-text {

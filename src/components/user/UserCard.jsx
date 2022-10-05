@@ -62,11 +62,11 @@ const UserCard = ({ userData }) => {
 								</div>
 								<div>
 									<h3>Created At</h3>
-									<p>{createdAt}</p>
+									<p>{formattedCreatedAt}</p>
 								</div>
 								<div>
 									<h3>Last Logged In</h3>
-									<p>{lastLoggedIn}</p>
+									<p>{formattedLoggedIn}</p>
 								</div>
 							</div>
 						</section>
