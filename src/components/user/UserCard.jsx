@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
+
 import Card from '../UI/Card'
+import UserIcon from './UserIcon'
 import classes from './UserCard.module.css'
-import userIcon from '../../assets/user.svg'
 import expand from '../../assets/expand_more.svg'
 import contract from '../../assets/expand_less.svg'
-import { phoneNumberFormatter } from '../../helper-functions/helperFunctions'
+import {
+	phoneNumberFormatter,
+	dateFormatter,
+} from '../../helper-functions/helperFunctions'
 
 const UserCard = ({ userData }) => {
 	const [isExpanded, setIsExpanded] = useState(false)
-
-	console.log(userData)
 	const {
 		firstName,
 		lastName,
@@ -25,8 +27,8 @@ const UserCard = ({ userData }) => {
 	} = userData
 
 	const formattedPhone = phoneNumberFormatter(phone)
-
-	console.log(formattedPhone)
+	const formattedCreatedAt = dateFormatter(createdAt)
+	const formattedLoggedIn = dateFormatter(lastLoggedIn)
 
 	const clickHandler = () => {
 		setIsExpanded(!isExpanded)
@@ -34,17 +36,11 @@ const UserCard = ({ userData }) => {
 
 	return (
 		<Card>
-			<div className={classes.container}>
-				<div className={classes['icon-wrapper']}>
-					<img
-						className={classes['role-icon']}
-						src={userIcon}
-						alt=""
-					/>
-				</div>
-				<div className={classes['inner-container']}>
-					<div className={classes['top-container']}>
-						<div className={classes['info-container']}>
+			<div className={classes['main-container']}>
+				<UserIcon role={role} />
+				<div className={classes['main-inner']}>
+					<div className={classes['top-info']}>
+						<div className={classes['top-inner']}>
 							<h3>{`${firstName} ${lastName}`}</h3>
 							<h4>{role}</h4>
 							<p className={classes.email}>{email}</p>
@@ -54,8 +50,8 @@ const UserCard = ({ userData }) => {
 						</button>
 					</div>
 					{isExpanded && (
-						<section className={classes['bottom-container']}>
-							<div className={classes.inner}>
+						<section className={classes['bottom-info']}>
+							<div className={classes['bottom-inner']}>
 								<div>
 									<h3>Address</h3>
 									<p>{`${street}, ${city}, ${state} ${zip}`}</p>

@@ -5,3 +5,7 @@ export const phoneNumberFormatter = (phoneNumber) => {
 
 	return `(${areaCode}) ${exCode}-${lnNum}`
 }
+
+export const dateFormatter = (date) => {
+    
+}

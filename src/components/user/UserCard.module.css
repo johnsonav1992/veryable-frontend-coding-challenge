@@ -1,12 +1,12 @@
 @import '../../App.css';
 
-.container {
+.main-container {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
-.inner-container {
+.main-inner {
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-.top-container {
+.top-info {
     display: flex;
     align-items: space-between;
     justify-content: flex-start;
@@ -22,38 +22,28 @@
     gap: .5rem;
 }
 
-.info-container {
+.top-inner {
     width: 100%;
 }
 
-.icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.role-icon {
-    width: 50px;
-}
-
-.bottom-container {
+.bottom-info {
     width: 60%;
     display: flex;
 }
 
-.bottom-container h3, .info-container h3 {
+.bottom-info h3, .top-inner h3 {
     font-size: 12px;
     font-weight: 700;
     color: var(--gray-dark);
 }
 
-.bottom-container p, h4 {
+.bottom-info p, h4 {
     font-size: 10px;
     font-weight: normal;
     color: var(--gray-dark);
 }
 
-.inner {
+.bottom-inner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
