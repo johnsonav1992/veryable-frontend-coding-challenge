@@ -56,11 +56,3 @@
     color: var(--gray-light);
 }
 
-.btn {
-    background-color: transparent;
-    border: none;
-}
-
-.btn:hover {
-    cursor: pointer;
-}

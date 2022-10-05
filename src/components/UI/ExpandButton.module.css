@@ -1,0 +1,11 @@
+@import '../../App.css';
+
+.btn {
+    background-color: transparent;
+    filter: var(--gray-filter);
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}

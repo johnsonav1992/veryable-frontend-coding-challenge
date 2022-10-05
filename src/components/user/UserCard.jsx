@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 import Card from '../UI/Card'
 import UserIcon from './UserIcon'
+import ExpandButton from '../UI/ExpandButton'
 import classes from './UserCard.module.css'
-import expand from '../../assets/expand_more.svg'
-import contract from '../../assets/expand_less.svg'
+
 import {
 	phoneNumberFormatter,
 	dateFormatter,
@@ -45,9 +45,10 @@ const UserCard = ({ userData }) => {
 							<h4>{role}</h4>
 							<p className={classes.email}>{email}</p>
 						</div>
-						<button className={classes.btn} onClick={clickHandler}>
-							<img src={isExpanded ? contract : expand} alt="" />
-						</button>
+						<ExpandButton
+							isExpanded={isExpanded}
+							onClick={clickHandler}
+						/>
 					</div>
 					{isExpanded && (
 						<section className={classes['bottom-info']}>
