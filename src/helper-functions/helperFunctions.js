@@ -18,13 +18,13 @@ export const dateFormatter = date => {
 
 	let hours = parsedDate.getHours()
 	let minutes = parsedDate.getMinutes()
-	const ampm = hours >= 12 ? 'PM' : 'AM'
+	const amPm = hours >= 12 ? 'PM' : 'AM'
 
 	hours %= 12
 	hours = hours || 12
 	minutes = minutes < 10 ? `0${minutes}` : minutes
 
-	const strTime = `${hours}:${minutes} ${ampm}`
+	const timeStr = `${hours}:${minutes} ${amPm}`
 
-	return `${finalDate.join('')} ${strTime}`
+	return `${finalDate.join('')} ${timeStr}`
 }

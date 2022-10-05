@@ -4,7 +4,7 @@ import classes from './UserIcon.module.css'
 
 const UserIcon = ({ role }) => {
 	const roleClass =
-		role != 'Administrator'
+		role !== 'Administrator'
 			? role === 'User'
 				? 'user'
 				: 'viewer'
